@@ -1,0 +1,30 @@
+@import 'fonts.css';
+
+body#tinymce.wp-editor { 
+    font-family: 'Franklin Gothic URW', sans-serif;
+    margin: 40px;
+    font-size: 13px;
+    color: #000000;
+}
+ 
+body#tinymce.wp-editor p {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+body#tinymce.wp-editor a {
+    color: #000000;
+}
+
+body#tinymce.wp-editor h1,
+body#tinymce.wp-editor h2,
+body#tinymce.wp-editor h3,
+body#tinymce.wp-editor h4,
+body#tinymce.wp-editor h5,
+body#tinymce.wp-editor h6 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}

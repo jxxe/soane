@@ -1,0 +1,283 @@
+/*
+Theme Name: Soane
+Author: Jerome Paulos
+Author URI: https://jeromepaulos.com
+Description: A rickety custom theme by and for Jerome Paulos. It is named after John Soane, the architect that created the expansive white walls of art galleries that we know today, and that were the inspiration for this theme.
+Text Domain: soane
+Version: 1.3
+*/
+
+@import 'css/fonts.css';
+
+/* Mobile */
+.menu-toggle,
+.site-title-container {
+    display: none;
+}
+
+@media all and (orientation:portrait) {
+      #sidebar,
+      body {
+          display: block!important;
+      }
+	
+	body {
+		margin: 40px 10px 0px 10px!important;
+	}
+
+      #sidebar {
+          height: inherit;
+          position: static;
+          width: 100%;
+      }
+
+      .menus {
+          display: flex;
+          width: 100%;
+      }
+
+      main {
+          width: 100%!important;
+      }
+
+      .menus .menu {
+          margin-top: 0;
+      }
+
+      .site-info h1 {
+          margin-bottom: 40px!important;
+      }
+
+      #grid .grid {
+          column-count: 1!important;
+      }
+
+      .menus div {
+          width: 50%;
+      }
+
+      .caption,
+      #slider {
+          display: none!important;
+      }
+
+      #grid {
+          display: block!important;
+          opacity: 1!important;
+      }
+
+      .grid img:hover {
+          opacity: 1!important;
+      }
+
+      .grid img {
+          cursor: default!important;
+      }
+
+      .menu-toggle {
+          display: inline;
+          cursor: pointer;
+      }
+
+      .site-title-container {
+          display: flex;
+          background-color: white;
+      }
+
+      .site-title-container > * {
+          width: 50%;
+      }
+
+      .site-title-container div {
+          text-align: right;
+          text-transform: uppercase;
+          font-size: 13px;
+      }
+
+      .menu-secondary-container {
+          text-align: right;
+      }
+
+      .site-title {
+          display: none;
+      }
+}
+
+
+/* Page */
+
+#page p {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#page {
+    font-size: 13px;
+}
+
+#page :last-child {
+    margin-bottom: 0;
+}
+
+#page a {
+    color: #000000;
+}
+
+#page h1,
+#page h2,
+#page h3,
+#page h4,
+#page h5,
+#page h6 {
+    text-transform: uppercase;
+    font-weight: bold;;
+    font-size: 13px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+#sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#caption-slider-ul {
+    padding-bottom: 0!important;
+}
+
+::selection {
+    background-color: black;
+    color: white;
+}
+
+body {
+    display: flex;
+    margin: 50px;
+    font-family: 'Franklin Gothic URW', sans-serif;
+    background-color: white;
+}
+
+nav {
+    width: 200px;
+    margin-right: 50px;
+    position: sticky;
+    top: 50px;
+    height: calc(100vh - 100px);
+}
+
+nav h1 {
+    margin-top: 0;
+    margin-bottom: 40px;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+}
+
+nav #menu-primary,
+nav #menu-secondary {
+    list-style: none;
+    padding: 0;
+}
+
+nav #menu-primary {
+    margin-bottom: 40px;
+}
+
+nav #menu-primary .menu-item,
+nav #menu-secondary .menu-item {
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+nav .primary-menu .menu-item a,
+nav .secondary-menu .menu-item a {
+    color: black;
+    text-decoration: none;
+}
+
+main {
+    width: calc( 100% - 200px );
+}
+
+.caption {
+    color: #999999;
+    font-size: 13px;
+}
+
+/* Grid */
+
+#grid {
+    display: none;
+}
+
+#grid .grid {
+    width: 100%;
+    column-gap: 10px;
+}
+
+#grid .grid img {
+    margin-bottom: 7px;
+    width: 100%;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.grid img:hover {
+    opacity: 0.9;
+    transition: all 0.2s;
+}
+
+/* Slider */
+
+#slider .image-slider-container,
+#slider .image-slider {
+    width: 100%;
+    height: 100%;
+}
+
+#slider .overlay-left,
+#slider .overlay-right {
+    width: 42.5%;
+    height: 100%;
+}
+
+#slider .overlay-center {
+    width: 15%;
+}
+
+#slider .overlay-left {
+    cursor: w-resize;
+}
+
+#slider .overlay-right {
+    cursor: e-resize;
+}
+
+#slider .overlay-center {
+    cursor: url(inc/cursor.png), n-resize;
+}
+
+#slider .overlay {
+    display: flex;
+    z-index: 100;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+#slider .image-slide {
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#slider .image-slider * {
+    height: 100%;
+}
