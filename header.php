@@ -10,11 +10,10 @@
     ?></title>
     <meta name="theme-color" content="#000000"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link href="<?php echo get_template_directory_uri(); ?>/style.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css" rel="stylesheet">
+    <link href="<?php echo get_template_directory_uri(); ?>/inc/lightslider/lightslider.min.css" rel="stylesheet">
+    
     <?php if( is_singular('page') ) { ?>
         <?php if( get_field('color_theme') == 'dark' ) { ?>
             <style>
