@@ -178,18 +178,27 @@ nav a {
     text-decoration: none;
 }
 
-nav #menu-primary,
-nav #menu-secondary {
+nav .sub-menu {
     list-style: none;
     padding: 0;
 }
 
-nav #menu-primary {
+nav .sub-menu > li > a {
+    color: gray;
+}
+
+nav .primary-menu,
+nav .secondary-menu {
+    list-style: none;
+    padding: 0;
+}
+
+nav .primary-menu {
     margin-bottom: 40px;
 }
 
-nav #menu-primary .menu-item,
-nav #menu-secondary .menu-item {
+nav .primary-menu .menu-item,
+nav .secondary-menu .menu-item {
     margin-bottom: 10px;
     font-size: 13px;
 }

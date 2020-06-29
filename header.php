@@ -14,40 +14,6 @@
     <link href="<?php echo get_template_directory_uri(); ?>/style.css" rel="stylesheet">
     <link href="<?php echo get_template_directory_uri(); ?>/inc/lightslider/lightslider.min.css" rel="stylesheet">
     
-    <?php if( is_singular('page') ) { ?>
-        <?php if( get_field('color_theme') == 'dark' ) { ?>
-            <style>
-                body {
-                    background-color: #000000;
-                }
-				
-				* {
-					color: white!important;
-				}
-				
-				.site-title-container {
-					background-color: black!important;
-				}
-            </style>
-        <?php } ?>
-        <?php if( !empty(get_field('images')) ) { ?>
-		<script>
-		$(document).ready(function() {
-			$('.copyright').hide();	
-		})
-		</script>
-        <style>
-            #grid .grid {
-                column-count: <?php echo get_field('columns'); ?>;
-            }
-            <?php if( get_field('color_theme') == 'dark' ) { ?>
-            body {
-                background-color: #000000;
-                color: white;
-            }
-            <?php }} ?>
-        </style>
-    <?php } ?>
     <?php wp_head(); ?>
 </head>
 <body id="body" class="<?php body_class(); ?>">
@@ -55,8 +21,14 @@
     <div class="site-info">
         <a class="site-title" href="<?php echo get_bloginfo( 'url' ); ?>"><h1><?php echo get_bloginfo( 'name' ); ?></h1></a>
         <div class="menus">
-            <?php wp_nav_menu( array( 'menu' => 'primary', ) ); ?>
-            <?php wp_nav_menu( array( 'menu' => 'secondary', ) ); ?>
+            <?php wp_nav_menu( array(
+                'menu' => 'primary',
+                'menu_class' => 'primary-menu'
+            ) ); ?>
+            <?php wp_nav_menu( array(
+                'menu' => 'secondary',
+                'menu_class' => 'secondary-menu'
+            ) ); ?>
         </div>
         <div class="site-title-container">
             <a href="<?php echo get_bloginfo( 'url' ); ?>"><h1><?php echo get_bloginfo( 'name' ); ?></h1></a>
